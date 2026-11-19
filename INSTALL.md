@@ -1,10 +1,30 @@
-# Установка Codex Interrogation Mode
+# Установка Interrogation Mode (все агенты)
 
 [← README](README.md) · [English](README.en.md)
 
+## Установка через ИИ-агента (проще всего)
+
+Скопируйте в чат своего агента:
+
+```text
+Установи skill из https://github.com/lolpul/codex-interrogation. Сначала прочитай AGENT_INSTALL.md, выбери каталог для своего агента, проверь и сообщи результат.
+```
+
+Руководство агента: [AGENT_INSTALL.md](AGENT_INSTALL.md). Альтернативные ручные пути:
+
+| Агент | Глобальный каталог |
+| --- | --- |
+| Codex | `~/.agents/skills/` или существующий `~/.codex/skills/` |
+| Claude Code | `~/.claude/skills/` |
+| Cursor | `~/.cursor/skills/` или `~/.agents/skills/` |
+| Gemini CLI | `~/.gemini/skills/` (либо `gemini skills install <repo>`) |
+| OpenCode | `~/.config/opencode/skills/` или `~/.agents/skills/` |
+
+Все пути в дальнейшем примере относятся к **Codex**. Для других агентов замени каталог назначения и команду запуска по таблице.
+
 ## Требования
 
-- Установленный OpenAI Codex с поддержкой пользовательских skills.
+- Один из совместимых coding agents с поддержкой Agent Skills (Codex, Claude Code, Cursor, Gemini CLI, OpenCode).
 - Доступ на чтение/копирование файлов в каталоге skills.
 - Никаких пакетов Python/Node.js и внешнего сервера не требуется.
 
@@ -75,7 +95,7 @@ cp -R ./interrogation ~/.agents/skills/
 
 ## Шаг 5. Запуск
 
-1. Перезапустите Codex или откройте новую сессию, чтобы он перечитал список skills.
+1. Перезапустите своего агента или откройте новую сессию, чтобы он перечитал список skills.
 2. При работе над рискованной задачей включите штатный `/plan` (и при необходимости `Read Only`).
 3. Запустите:
 

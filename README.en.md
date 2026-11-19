@@ -1,10 +1,31 @@
-# Codex Interrogation Mode
+# Interrogation Mode — Universal Agent Skill
 
 [Русский](README.md) · [Installation](INSTALL.md) · [Test scenarios](TEST_SCENARIOS.md)
 
 **A requirements-first interview skill for OpenAI Codex.** Codex should inspect the relevant repository context, ask blocking questions, reconcile conflicting requirements, prepare an acceptance-testable specification, and wait for explicit approval **before implementing**.
 
 This is a **community-maintained, unofficial Codex skill**, not a built-in Codex mode or security boundary.
+
+
+## Install by sending one prompt to your coding agent
+
+Paste this into **Codex, Claude Code, Cursor, Gemini CLI, or OpenCode**:
+
+```text
+Install the interrogation skill from https://github.com/lolpul/codex-interrogation. Read AGENT_INSTALL.md, detect your agent, install globally, preserve existing skills, verify installation, and tell me how to use it.
+```
+
+The agent will use [AGENT_INSTALL.md](AGENT_INSTALL.md) for the platform-specific destination, safe update and verification steps. A bare URL without an installation request is ambiguous. File-system and network permissions may require approval.
+
+| Agent | Typical invocation |
+| --- | --- |
+| Codex | `$interrogation` |
+| Claude Code | `/interrogation` |
+| Cursor | `/interrogation` in Agent chat |
+| Gemini CLI | Ask it to activate the `interrogation` skill |
+| OpenCode | `@interrogation` |
+
+The skill uses the open `SKILL.md` format. Agent-specific installation details live in the installer guide. This is a behaviour guideline rather than a technical read-only guarantee.
 
 ## Why use it?
 
