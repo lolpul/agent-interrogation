@@ -1,0 +1,6 @@
+interface:
+  display_name: "Interrogation Mode"
+  short_description: "Адаптивный допрос Light / Standard / Deep до кода"
+  default_prompt: "Используй $interrogation в режиме auto: сначала изучи релевантный код без изменений, оцени сложность, закрой все блокирующие вопросы и подготовь ТЗ. Не реализуй ничего до явного утверждения."
+policy:
+  allow_implicit_invocation: false
