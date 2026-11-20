@@ -7,7 +7,7 @@
 Скопируйте в чат своего агента:
 
 ```text
-Установи skill из https://github.com/lolpul/codex-interrogation. Сначала прочитай AGENT_INSTALL.md, выбери каталог для своего агента, проверь и сообщи результат.
+Установи skill из https://github.com/lolpul/agent-interrogation. Сначала прочитай AGENT_INSTALL.md, выбери каталог для своего агента, проверь и сообщи результат.
 ```
 
 Руководство агента: [AGENT_INSTALL.md](AGENT_INSTALL.md). Альтернативные ручные пути:
@@ -31,8 +31,8 @@
 ## Шаг 1. Получить файлы
 
 ```bash
-git clone https://github.com/lolpul/codex-interrogation.git
-cd codex-interrogation
+git clone https://github.com/lolpul/agent-interrogation.git
+cd agent-interrogation
 ```
 
 Или скачайте ZIP репозитория в GitHub → **Code → Download ZIP**, затем распакуйте его и откройте полученную папку.

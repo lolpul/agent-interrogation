@@ -4,7 +4,6 @@
 
 [English](README.en.md) · [Установка агентом](AGENT_INSTALL.md) · [Ручная установка](INSTALL.md) · [Сценарии проверки](TEST_SCENARIOS.md) · [История изменений](CHANGELOG.md)
 
-> **Статус:** v2.1 · универсальный Agent Skill · интерфейс на языке пользователя · без обязательных внешних зависимостей.
 
 ## Зачем это нужно
 
@@ -31,7 +30,7 @@
 Не нужно вручную искать каталоги skills. **Скопируйте эту строку в чат Codex, Claude Code, Cursor, Gemini CLI или OpenCode**:
 
 ```text
-Установи skill Interrogation Mode из https://github.com/lolpul/codex-interrogation. Прочитай AGENT_INSTALL.md, определи свой агент, установи skill глобально, не затрагивай другие skills, проверь установку и скажи, как запустить.
+Установи skill Interrogation Mode из https://github.com/lolpul/agent-interrogation. Прочитай AGENT_INSTALL.md, определи свой агент, установи skill глобально, не затрагивай другие skills, проверь установку и скажи, как запустить.
 ```
 
 Агент может потребовать доступ к GitHub и подтверждение записи файлов. **Одна только ссылка без просьбы установить skill не всегда достаточна**: агент может решить, что нужно просто открыть репозиторий. Порядок установки для самих агентов находится в [AGENT_INSTALL.md](AGENT_INSTALL.md).
@@ -50,7 +49,7 @@
 
 ## Ручная установка (пример: Codex)
 
-Скачайте [исходный код](https://github.com/lolpul/codex-interrogation/archive/refs/heads/main.zip) или клонируйте репозиторий. Перенести требуется **только каталог `interrogation`**, содержащий `SKILL.md` и `agents/openai.yaml`.
+Скачайте [исходный код](https://github.com/lolpul/agent-interrogation/archive/refs/heads/main.zip) или клонируйте репозиторий. Перенести требуется **только каталог `interrogation`**, содержащий `SKILL.md` и `agents/openai.yaml`.
 
 **Windows PowerShell (глобально, рекомендованный каталог):**
 
@@ -171,7 +170,7 @@ Read-only анализ проекта
 ## Структура
 
 ```text
-codex-interrogation/
+agent-interrogation/
 ├── interrogation/
 │   ├── SKILL.md
 │   └── agents/
@@ -190,7 +189,7 @@ codex-interrogation/
 
 ## Проверка и участие
 
-Девять проверочных сценариев — в [TEST_SCENARIOS.md](TEST_SCENARIOS.md). Они покрывают выбор глубины, критичные риски, делегирование решения, изменение ответов, запрет на реализацию и чистоту репозитория. Проверки **ручные**, утверждать, что они пройдены в разных версиях Codex, нельзя.
+Проверочные сценарии — в [TEST_SCENARIOS.md](TEST_SCENARIOS.md). Они покрывают выбор глубины, критичные риски, делегирование решения, изменение ответов, запрет на реализацию и чистоту репозитория. Проверки **ручные**, утверждать, что они пройдены в разных версиях Codex, нельзя.
 
 Предложения и баг-репорты приветствуются: [CONTRIBUTING.md](CONTRIBUTING.md).
 

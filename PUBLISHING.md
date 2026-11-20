@@ -1,11 +1,11 @@
 # Публикация репозитория на GitHub
 
-Файлы готовы к публикации в `https://github.com/lolpul/codex-interrogation`. Репозиторий создан. Этот документ описывает подготовку чистого репозитория или публикацию форка.
+Основной репозиторий опубликован: `https://github.com/lolpul/agent-interrogation`. Инструкция ниже пригодится при создании форка или отдельной копии.
 
 ## Вариант А — через GitHub (без GitHub CLI)
 
 1. Откройте https://github.com/new.
-2. В **Repository name** укажите `codex-interrogation`.
+2. В **Repository name** укажите `agent-interrogation`.
 3. Выберите **Public**.
 4. Не добавляйте README, .gitignore или лицензию при создании: они уже есть в пакете.
 5. Нажмите **Create repository**.
@@ -21,7 +21,7 @@
 git init -b main
 git add .
 git commit -m "Initial release: Codex Interrogation Mode v2"
-gh repo create lolpul/codex-interrogation --public --source . --remote origin --push
+gh repo create lolpul/agent-interrogation --public --source . --remote origin --push
 ```
 
 Если имя уже занято, GitHub сообщит об ошибке. Не перезаписывайте чужой/существующий репозиторий автоматически.

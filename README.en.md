@@ -12,7 +12,7 @@ This is a **community-maintained, unofficial Codex skill**, not a built-in Codex
 Paste this into **Codex, Claude Code, Cursor, Gemini CLI, or OpenCode**:
 
 ```text
-Install the interrogation skill from https://github.com/lolpul/codex-interrogation. Read AGENT_INSTALL.md, detect your agent, install globally, preserve existing skills, verify installation, and tell me how to use it.
+Install the interrogation skill from https://github.com/lolpul/agent-interrogation. Read AGENT_INSTALL.md, detect your agent, install globally, preserve existing skills, verify installation, and tell me how to use it.
 ```
 
 The agent will use [AGENT_INSTALL.md](AGENT_INSTALL.md) for the platform-specific destination, safe update and verification steps. A bare URL without an installation request is ambiguous. File-system and network permissions may require approval.
@@ -47,8 +47,8 @@ Question counts are guidance, not hard limits. **Unresolved blocking questions m
 Clone this repository:
 
 ```bash
-git clone https://github.com/lolpul/codex-interrogation.git
-cd codex-interrogation
+git clone https://github.com/lolpul/agent-interrogation.git
+cd agent-interrogation
 ```
 
 Copy the **`interrogation` directory** (not the entire repository) to the user-level skills folder:
