@@ -202,3 +202,9 @@ agent-interrogation/
 ## Лицензия
 
 [MIT](LICENSE). Неофициальный пользовательский проект; не является продуктом или официальным расширением OpenAI.
+
+## Публикация как OpenAI Skills-only Plugin
+
+Репозиторий также содержит **отдельную упаковку для Plugins**: переносимый `plugin.json`, `.codex-plugin/plugin.json`, `skills/interrogation/` и иконку. Это тот же самый skill, а не новый режим и не замена `/plan`.
+
+Проверить структуру: `python scripts/build_plugin.py --check`. Собрать ZIP: `python scripts/build_plugin.py` (в `dist/`). Обычная установка из `interrogation/` продолжает работать без изменений. Инструкции: [docs/PLUGIN_SUBMISSION.md](docs/PLUGIN_SUBMISSION.md). Плагин **ещё не опубликован** в официальном каталоге OpenAI.

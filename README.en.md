@@ -111,3 +111,9 @@ This is an instruction-based workflow, not a technical write lock. The model can
 See [CONTRIBUTING.md](CONTRIBUTING.md). Licensed under the [MIT License](LICENSE).
 
 Resources: [Codex skills](https://developers.openai.com/codex/skills) · [Skill evals](https://developers.openai.com/blog/eval-skills) · [Plan mode](https://developers.openai.com/blog/run-long-horizon-tasks-with-codex).
+
+## OpenAI Skills-only Plugin distribution
+
+This repository also provides a portable `plugin.json`, a Codex compatibility manifest, an identical skill copy at `skills/interrogation/`, and an icon. This is a distribution format for the **same** skill, not a new built-in Codex mode or a replacement for `/plan`.
+
+Validate using `python scripts/build_plugin.py --check`; package with `python scripts/build_plugin.py` (output in `dist/`). Legacy/direct installations from `interrogation/` are unchanged. See [the submission guide](docs/PLUGIN_SUBMISSION.md). **Not yet published or endorsed by OpenAI.**

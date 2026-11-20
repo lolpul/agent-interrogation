@@ -1,5 +1,11 @@
 # Changelog
 
+## Plugin packaging (2026-11-21)
+
+- Добавлены portable manifest, Codex compatibility manifest, упаковка skills-only plugin и SVG-иконка.
+- Добавлены стандартная локальная структурная проверка и сборщик ZIP без внешних зависимостей.
+- Обычная установка и исходный `interrogation/SKILL.md` не изменены.
+
 ## [2.1.0] — 2026-11-19
 
 - Универсальная логика skill для Codex, Claude Code, Cursor, Gemini CLI и OpenCode.

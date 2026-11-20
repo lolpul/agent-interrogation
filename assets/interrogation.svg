@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
+  <title>Interrogation Mode</title>
+  <rect x="0" y="0" width="512" height="512" rx="96" fill="#18212E"/>
+  <path d="M131 131h250a29 29 0 0 1 29 29v154a29 29 0 0 1-29 29H228l-74 56v-56h-23a29 29 0 0 1-29-29V160a29 29 0 0 1 29-29Z" fill="none" stroke="#EDECE7" stroke-width="20" stroke-linejoin="round"/>
+  <path d="M229 214c0-28 20-46 49-46 27 0 47 17 47 43 0 22-17 35-34 46-12 7-17 15-17 25" fill="none" stroke="#F49A4E" stroke-width="24" stroke-linecap="round"/>
+  <circle cx="274" cy="313" r="12" fill="#F49A4E"/>
+</svg>

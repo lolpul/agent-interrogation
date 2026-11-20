@@ -1,0 +1,51 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "agent-interrogation",
+  "version": "2.1.0",
+  "description": "Adaptive requirements-interview skill for coding agents; clarify the task and agree on a specification before implementation.",
+  "author": {
+    "name": "Elisey Kochura",
+    "url": "https://github.com/lolpul"
+  },
+  "homepage": "https://github.com/lolpul/agent-interrogation",
+  "repository": "https://github.com/lolpul/agent-interrogation",
+  "license": "MIT",
+  "keywords": [
+    "codex",
+    "agent-skills",
+    "requirements",
+    "interview",
+    "specification",
+    "planning"
+  ],
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "Interrogation Mode",
+        "shortDescription": "Clarify requirements first",
+        "longDescription": "A requirements-first interview for coding agents. Inspect relevant project context, identify blocking ambiguities, adapt interview depth (Auto, Light, Standard, Deep), resolve conflicting choices, and prepare an acceptance-testable specification before asking for explicit approval to implement. Useful for underspecified features and multi-module integrations. Opt-in only. This is an instruction-based skill, not a technical write lock, and it does not guarantee time or token savings.",
+        "developerName": "Elisey Kochura",
+        "category": "Developer Tools",
+        "capabilities": [
+          "Requirements discovery",
+          "Architecture clarification",
+          "Specification drafting",
+          "Explicit approval checkpoint"
+        ],
+        "websiteURL": "https://github.com/lolpul/agent-interrogation",
+        "supportURL": "https://github.com/lolpul/agent-interrogation/issues",
+        "defaultPrompt": [
+          "Use interrogation mode to clarify this feature's requirements before writing code.",
+          "Run a deep requirements interview for this architecture change and draft an approved spec."
+        ],
+        "brandColor": "#253247",
+        "brandColorDark": "#F49A4E",
+        "composerIcon": "./assets/interrogation.svg",
+        "logo": "./assets/interrogation.svg"
+      },
+      "publication": {
+        "release_notes": "Initial skills-only plugin distribution of Interrogation Mode v2.1. Existing direct Agent Skill installation remains supported."
+      }
+    }
+  }
+}
