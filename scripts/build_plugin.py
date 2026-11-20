@@ -25,6 +25,19 @@ REQUIRED = [
 ]
 
 
+def parse_frontmatter(raw: bytes) -> str:
+    """Read YAML frontmatter with LF or CRLF line endings (and optional UTF-8 BOM).
+
+    Git for Windows may check Markdown files out as CRLF. The skill remains
+    valid: the validator must not mistake a newline convention for missing YAML.
+    """
+    text = raw.decode("utf-8-sig").replace("\r\n", "\n").replace("\r", "\n")
+    match = re.match(r"\A---\n(?P<header>.*?)\n---(?:\n|\Z)", text, re.DOTALL)
+    if match is None:
+        raise ValueError("SKILL.md is missing YAML frontmatter")
+    return match.group("header")
+
+
 def validate() -> dict:
     errors = []
     for path in REQUIRED:
@@ -81,13 +94,15 @@ def validate() -> dict:
         ROOT / "skills/interrogation/agents/openai.yaml"
     ).read_bytes():
         errors.append("Packaged Codex metadata differs from original")
-    if not distributed.startswith(b"---\n"):
-        errors.append("SKILL.md is missing YAML frontmatter")
-    header = distributed.split(b"---", 2)[1].decode("utf-8", errors="replace")
-    if not re.search(r"(?m)^name:\s*interrogation\s*$", header):
-        errors.append("SKILL.md must declare name: interrogation")
-    if not re.search(r"(?m)^description:\s*\S+", header):
-        errors.append("SKILL.md must declare a description")
+    try:
+        header = parse_frontmatter(distributed)
+    except ValueError as err:
+        errors.append(str(err))
+    else:
+        if not re.search(r"(?m)^name:\s*interrogation\s*$", header):
+            errors.append("SKILL.md must declare name: interrogation")
+        if not re.search(r"(?m)^description:\s*\S+", header):
+            errors.append("SKILL.md must declare a description")
     if errors:
         raise ValueError("\n".join(errors))
     return plugin
