@@ -1,5 +1,13 @@
 # Changelog
 
+## [Unreleased] — release-readiness work
+
+- CI matrix for Windows/Linux with Python tests, YAML validation and plugin ZIP build.
+- GitHub Issue forms, manual verification log and explicit release acceptance criteria.
+- Neutral integration scenario in public tests; documentation of feedback and CI.
+- **No new GitHub Release or empirical agent-behavior claims yet.**
+
+
 ## Plugin packaging (2026-11-21)
 
 - Добавлены portable manifest, Codex compatibility manifest, упаковка skills-only plugin и SVG-иконка.

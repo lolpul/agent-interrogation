@@ -37,7 +37,7 @@ Run the plugin in a clean supported client and verify:
 
 Detailed existing test prompts are in [TEST_SCENARIOS.md](../TEST_SCENARIOS.md).
 
-These are manual behavior checks. Passing the structural validator **does not prove** correct runtime behavior, a technical write lock, or measurable savings in time/tokens. There is no requirement to prove that the skill outperforms Codex Plan Mode, which serves a different workflow.
+Record real runs in [MANUAL_TEST_LOG.md](MANUAL_TEST_LOG.md) and follow the [release checklist](RELEASE_CHECKLIST.md). For CI-only validation install `requirements-dev.txt` and run `python -m unittest discover -s tests -v`. These are manual behavior checks. Passing the structural validator **does not prove** correct runtime behavior, a technical write lock, or measurable savings in time/tokens. There is no requirement to prove that the skill outperforms Codex Plan Mode, which serves a different workflow.
 
 ## Submit
 
