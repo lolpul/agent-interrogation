@@ -1,0 +1,55 @@
+name: Bug report
+description: Report a reproducible problem with installation or requirements interviews.
+title: "[Bug] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for reporting a problem. Please remove all API keys,
+        private repository code, credentials, and personal data from examples.
+  - type: dropdown
+    id: agent
+    attributes:
+      label: Agent or client
+      options:
+        - OpenAI Codex
+        - Claude Code
+        - Cursor
+        - Gemini CLI
+        - OpenCode
+        - Other
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Client version and operating system
+      placeholder: "e.g. Codex CLI version, Windows 11"
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Steps to reproduce
+      description: Include activation prompt and a minimal non-sensitive example.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behavior
+    validations:
+      required: true
+  - type: textarea
+    id: details
+    attributes:
+      label: Additional context (optional)
+      description: Redacted logs or screenshots; mention whether Plan/Read Only mode was active.
+    validations:
+      required: false

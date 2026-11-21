@@ -1,0 +1,2 @@
+# Development/CI only. The installed skill and plugin need no Python packages.
+PyYAML>=6.0,<7.0

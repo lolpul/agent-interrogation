@@ -1,0 +1,44 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    name: Validate on ${{ matrix.os }} / Python ${{ matrix.python-version }}
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+        python-version: ["3.11", "3.12"]
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+
+      - name: Install test-only YAML dependency
+        run: python -m pip install -r requirements-dev.txt
+
+      - name: Run unit and packaging regression tests
+        run: python -m unittest discover -s tests -v
+
+      - name: Validate portable plugin structure
+        run: python scripts/build_plugin.py --check
+
+      - name: Build minimal submission archive
+        run: python scripts/build_plugin.py
+
+      - name: Check archive integrity
+        run: python -c "import glob, zipfile; f=glob.glob('dist/agent-interrogation-*.zip'); assert len(f)==1, f; z=zipfile.ZipFile(f[0]); assert z.testzip() is None; print('Archive OK:', f[0])"

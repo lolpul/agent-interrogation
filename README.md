@@ -189,6 +189,19 @@ agent-interrogation/
 
 ## Проверка и участие
 
+Сообщить об ошибке: [Bug Report](https://github.com/lolpul/agent-interrogation/issues/new/choose).
+Предложить улучшение: [Feature Request](https://github.com/lolpul/agent-interrogation/issues/new/choose).
+Посмотреть обращения: [GitHub Issues](https://github.com/lolpul/agent-interrogation/issues).
+Если воспроизводите проблему, укажите версию агента, шаги, ожидаемое и фактическое поведение,
+но не публикуйте приватные исходники и ключи.
+
+**Качество и релизы:** [CI](.github/workflows/ci.yml) ·
+[журнал ручных проверок](docs/MANUAL_TEST_LOG.md) ·
+[критерии стабильного релиза](docs/RELEASE_CHECKLIST.md).
+Автоматические проверки не являются подтверждением поведения ИИ-агентов; результаты
+ручных тестов будут опубликованы только после реальных прогонов.
+
+
 Проверочные сценарии — в [TEST_SCENARIOS.md](TEST_SCENARIOS.md). Они покрывают выбор глубины, критичные риски, делегирование решения, изменение ответов, запрет на реализацию и чистоту репозитория. Проверки **ручные**, утверждать, что они пройдены в разных версиях Codex, нельзя.
 
 Предложения и баг-репорты приветствуются: [CONTRIBUTING.md](CONTRIBUTING.md).

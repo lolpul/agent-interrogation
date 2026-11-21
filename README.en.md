@@ -117,3 +117,17 @@ Resources: [Codex skills](https://developers.openai.com/codex/skills) · [Skill 
 This repository also provides a portable `plugin.json`, a Codex compatibility manifest, an identical skill copy at `skills/interrogation/`, and an icon. This is a distribution format for the **same** skill, not a new built-in Codex mode or a replacement for `/plan`.
 
 Validate using `python scripts/build_plugin.py --check`; package with `python scripts/build_plugin.py` (output in `dist/`). Legacy/direct installations from `interrogation/` are unchanged. See [the submission guide](docs/PLUGIN_SUBMISSION.md). **Not yet published or endorsed by OpenAI.**
+
+## Testing, feedback and release readiness
+
+Report a reproducible bug or suggest an improvement through
+[GitHub Issues](https://github.com/lolpul/agent-interrogation/issues/new/choose).
+Please include agent/client version, reproduction steps, expected and observed behavior;
+do not disclose secrets or private project source code.
+
+[CI workflow](.github/workflows/ci.yml) checks Python unit tests, YAML metadata,
+identical skill copies and ZIP integrity on Windows and Linux.
+[Manual test log](docs/MANUAL_TEST_LOG.md) tracks actual agent sessions; unrun
+scenarios remain `NOT RUN`.
+[Release checklist](docs/RELEASE_CHECKLIST.md) defines the remaining acceptance gates.
+A passing CI does not prove the agent obeys approval instructions.

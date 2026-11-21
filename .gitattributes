@@ -1,0 +1,6 @@
+# Keep skill copies and YAML consistent across Linux and Git for Windows.
+*.md text eol=lf
+*.yaml text eol=lf
+*.yml text eol=lf
+*.py text eol=lf
+*.json text eol=lf

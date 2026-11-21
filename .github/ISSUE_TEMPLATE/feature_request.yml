@@ -1,0 +1,44 @@
+name: Feature request
+description: Propose a focused improvement to Interrogation Mode.
+title: "[Feature] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Please describe the workflow problem, not just a proposed mechanism.
+        Avoid including private repository details or credentials.
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem or use case
+      description: What task or decision is hard with the current skill?
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Suggested improvement
+      description: What behavior would help? Include an example if possible.
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives or trade-offs
+      description: How might this affect Light, Standard, or Deep interviews?
+    validations:
+      required: false
+  - type: dropdown
+    id: scope
+    attributes:
+      label: Relevant agent (optional)
+      options:
+        - All agents
+        - Codex
+        - Claude Code
+        - Cursor
+        - Gemini CLI
+        - OpenCode
+        - Other
+    validations:
+      required: false
