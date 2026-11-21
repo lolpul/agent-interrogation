@@ -175,7 +175,13 @@ agent-interrogation/
 │   ├── SKILL.md
 │   └── agents/
 │       └── openai.yaml
+├── skills/interrogation/   # Копия для ZIP плагина
+├── scripts/               # Проверка и сборка ZIP
+├── tests/                 # Автоматические тесты
+├── .github/               # GitHub Actions и шаблоны Issues
 ├── docs/
+│   ├── MANUAL_TEST_LOG.md
+│   ├── RELEASE_CRITERIA.md
 │   └── TROUBLESHOOTING.md
 ├── README.md
 ├── README.en.md
@@ -189,9 +195,11 @@ agent-interrogation/
 
 ## Проверка и участие
 
-Проверочные сценарии — в [TEST_SCENARIOS.md](TEST_SCENARIOS.md). Они покрывают выбор глубины, критичные риски, делегирование решения, изменение ответов, запрет на реализацию и чистоту репозитория. Проверки **ручные**, утверждать, что они пройдены в разных версиях Codex, нельзя.
+[GitHub Actions](https://github.com/lolpul/agent-interrogation/actions/workflows/ci.yml) запускает Python unit-тесты на Windows и Linux, проверяет YAML frontmatter и совпадение копий скилла, собирает и проверяет ZIP. Команды локального запуска приведены в [CONTRIBUTING.md](CONTRIBUTING.md).
 
-Предложения и баг-репорты приветствуются: [CONTRIBUTING.md](CONTRIBUTING.md).
+Поведение в Codex проверяют вручную по [сценариям](TEST_SCENARIOS.md). Результаты записывают в [журнал испытаний](docs/MANUAL_TEST_LOG.md) с указанием ревизии и версии клиента. Условия публикации перечислены в [критериях релиза](docs/RELEASE_CRITERIA.md).
+
+[Все Issues](https://github.com/lolpul/agent-interrogation/issues) · [Сообщить об ошибке](https://github.com/lolpul/agent-interrogation/issues/new?template=bug_report.md) · [Предложить улучшение](https://github.com/lolpul/agent-interrogation/issues/new?template=feature_request.md)
 
 ## Полезные источники
 

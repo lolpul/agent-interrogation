@@ -1,5 +1,11 @@
 # Changelog
 
+## Unreleased
+
+- GitHub Actions запускает тесты и проверяет сборку ZIP на Windows и Linux.
+- Тесты разбирают YAML frontmatter обеих копий скилла и проверяют настройку явного вызова в метаданных Codex.
+- Добавлены шаблоны Issues, журнал ручных испытаний и критерии релиза.
+
 ## Plugin packaging (2026-11-21)
 
 - Добавлены portable manifest, Codex compatibility manifest, упаковка skills-only plugin и SVG-иконка.
