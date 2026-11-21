@@ -104,11 +104,17 @@ Decisions are held in the **current conversation context**, not a persistent dat
 
 ## Limitations and testing
 
-This is an instruction-based workflow, not a technical write lock. The model can make mistakes and may still need supervision. Test coverage currently consists of [nine manual scenarios](TEST_SCENARIOS.md); behavior is not certified across all Codex clients and versions. The skill itself is written in Russian; Codex is instructed to respond in the user's language.
+The skill guides the model through an interview. The client's permissions govern access to files and tools. The skill is written in Russian and instructs agents to respond in the user's language.
+
+[GitHub Actions](https://github.com/lolpul/agent-interrogation/actions/workflows/ci.yml) runs Python unit tests, parses the skill's YAML frontmatter, compares both skill copies, and builds and validates the plugin ZIP on Windows and Linux. Run the same checks locally with the commands in [CONTRIBUTING.md](CONTRIBUTING.md).
+
+Use the [manual scenarios](TEST_SCENARIOS.md) to verify Codex behavior. Record the tested commit and client version in the [manual test log](docs/MANUAL_TEST_LOG.md). See the [release criteria](docs/RELEASE_CRITERIA.md) for publication requirements.
 
 ## Contributing and license
 
 See [CONTRIBUTING.md](CONTRIBUTING.md). Licensed under the [MIT License](LICENSE).
+
+[All Issues](https://github.com/lolpul/agent-interrogation/issues) · [Report a bug](https://github.com/lolpul/agent-interrogation/issues/new?template=bug_report.md) · [Request a feature](https://github.com/lolpul/agent-interrogation/issues/new?template=feature_request.md)
 
 Resources: [Codex skills](https://developers.openai.com/codex/skills) · [Skill evals](https://developers.openai.com/blog/eval-skills) · [Plan mode](https://developers.openai.com/blog/run-long-horizon-tasks-with-codex).
 

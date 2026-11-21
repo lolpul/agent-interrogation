@@ -19,3 +19,16 @@
 ## English
 
 Please submit reproducible reports or narrowly scoped PRs. Include the Codex version/client, trigger prompt, expected and actual behavior, and test evidence where available. Never include secrets or proprietary code. This skill is instruction-only and must not claim to enforce filesystem access controls.
+
+## Автоматические проверки / Automated checks
+
+CI использует Python 3.14 на Windows и Linux. Команды из корня репозитория:
+
+```sh
+python -m pip install -r requirements-test.txt
+python -m unittest discover -s tests -v
+python scripts/build_plugin.py --check
+python scripts/build_plugin.py
+```
+
+`PyYAML` нужен для тестов. Установка скилла и сборщик ZIP работают без этой зависимости. Если меняете скилл, правьте канонический каталог `interrogation/` и синхронизируйте `SKILL.md` и `agents/openai.yaml` в `skills/interrogation/`.
